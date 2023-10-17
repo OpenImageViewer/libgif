@@ -12,7 +12,9 @@ two modules will be linked.  Preserve this property!
 #include <limits.h>
 #include <stdint.h>
 #include <fcntl.h>
-//#include <unistd.h>
+#ifdef __linux__
+    #include <unistd.h>
+#endif
 #include <stdio.h>
 #include <string.h>
 

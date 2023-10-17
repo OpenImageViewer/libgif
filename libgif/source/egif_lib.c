@@ -8,13 +8,15 @@ two modules will be linked.  Preserve this property!
 
 *****************************************************************************/
 
-//#include <unistd.h>
+
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <fcntl.h>
-
+#ifdef __linux__
+    #include <unistd.h>
+#endif
 #ifdef _WIN32
 #include <io.h>
 #else
